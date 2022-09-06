@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:trade_easy/routes/routes.dart';
+
 import 'package:trade_easy/screens/screen_home/screen_home.dart';
 import 'package:trade_easy/screens/screen_login/screen_login.dart';
 import 'package:trade_easy/screens/screen_splash/screen_splash.dart';
