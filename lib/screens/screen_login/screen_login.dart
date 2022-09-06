@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:trade_easy/const/colors/colors.dart';
@@ -47,7 +49,8 @@ class ScreenLogin extends StatelessWidget {
                                 kHeight5,
                                 MaterialButton(
                                   onPressed: () {
-                                    Navigator.pushNamed(context, routeHome);
+                                    Navigator.pushNamedAndRemoveUntil(
+                                        context, routeHome, (route) => false);
                                   },
                                   color: loginButtonColor,
                                   minWidth: double.infinity,

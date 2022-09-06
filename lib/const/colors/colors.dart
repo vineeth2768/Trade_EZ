@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 
-const baseColor = Colors.teal;
-const kWhiteColor = Colors.white;
-const loginButtonColor = Color(0xFF272525);
-const primaryColor = Color(0xFF272525);
-const kBlue = Colors.blue;
-const kOrange = Colors.orange;
-const kGreen = Colors.green;
-const kRed = Colors.red;
-const kTeal = Colors.teal;
+const Color baseColor = Colors.teal;
+const Color kWhiteColor = Colors.white;
+const Color loginButtonColor = Color(0xFF272525);
+const Color primaryColor = Color(0xFF272525);
+const Color kBlue = Colors.blue;
+const Color kOrange = Colors.orange;
+const Color kGreen = Colors.green;
+const Color kRed = Colors.red;
+const Color kTeal = Colors.teal;
+
+const Color kBackgroundGrey = Color.fromRGBO(238, 238, 238, 1);
+const kTextErrorColor = Color(0xFFEF5350);
+const Color kButtonColor = Color(0xFF0A99AB);

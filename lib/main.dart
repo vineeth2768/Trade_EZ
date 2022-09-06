@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:trade_easy/routes/routes.dart';
-
 import 'package:trade_easy/screens/screen_home/screen_home.dart';
+
 import 'package:trade_easy/screens/screen_login/screen_login.dart';
 import 'package:trade_easy/screens/screen_splash/screen_splash.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown],
+  );
   runApp(const MyApp());
 }
 
@@ -25,9 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: route,
         routes: {
-          route: (context) => const ScreenSplash(),
+          route: (context) => ScreenSplash(),
           routeLogin: (context) => const ScreenLogin(),
-          routeHome: (context) => const ScreenHome(),
+          routeHome: (context) => const PosScreen(),
         },
       );
     });
