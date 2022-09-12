@@ -5,6 +5,7 @@ import 'package:trade_easy/routes/routes.dart';
 import 'package:trade_easy/screens/screen_home/screen_home.dart';
 
 import 'package:trade_easy/screens/screen_login/screen_login.dart';
+import 'package:trade_easy/screens/screen_pos/screen_pos.dart';
 import 'package:trade_easy/screens/screen_splash/screen_splash.dart';
 
 Future<void> main() async {
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         routes: {
           route: (context) => ScreenSplash(),
           routeLogin: (context) => const ScreenLogin(),
-          routeHome: (context) => const PosScreen(),
+          routeHome: (context) => const ScreenHome(),
+          routePos: (context) => const PosScreen(),
         },
       );
     });

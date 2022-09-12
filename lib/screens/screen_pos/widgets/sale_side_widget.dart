@@ -2,12 +2,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
+
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
-import 'package:trade_easy/screens/screen_home/widgets/payment_buttons_widget.dart';
-import 'package:trade_easy/screens/screen_home/widgets/price_section_widget.dart';
-import 'package:trade_easy/screens/screen_home/widgets/sale_table_header_widget.dart';
+
+import 'package:trade_easy/screens/screen_pos/widgets/payment_buttons_widget.dart';
+import 'package:trade_easy/screens/screen_pos/widgets/price_section_widget.dart';
 import 'package:trade_easy/utils/device.dart';
+
+import 'sale_table_header_widget.dart';
 
 class SaleSideWidget extends StatelessWidget {
   const SaleSideWidget({
@@ -196,7 +199,7 @@ class SaleSideWidget extends StatelessWidget {
                                 AutovalidateMode.onUserInteraction,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return '*';
+                                return '';
                               }
                               return null;
                             },
@@ -282,7 +285,7 @@ class SaleSideWidget extends StatelessWidget {
             PriceSectionWidget(isVertical: isVertical),
 
             //==================== Payment Buttons Widget ====================
-            PaymentButtonsWidget(isVertical: isVertical)
+            PaymentButtonsWidget(isVertical: isVertical),
           ],
         ),
       ),

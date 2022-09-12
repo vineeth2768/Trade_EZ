@@ -6,7 +6,8 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
-import 'package:trade_easy/screens/screen_home/widgets/sale_side_widget.dart';
+
+import 'package:trade_easy/screens/screen_pos/widgets/sale_side_widget.dart';
 import 'package:trade_easy/utils/device.dart';
 import 'package:trade_easy/widgets/custom_material_button.dart';
 
@@ -85,7 +86,7 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                               ),
                             ),
                             contentPadding: EdgeInsets.all(isThermal ? 8 : 10),
-                            hintText: 'Search product by name/code',
+                            hintText: 'Search product by name',
                             hintStyle: kText_10_12,
                             border: const OutlineInputBorder(),
                           )),
@@ -123,7 +124,7 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                         ),
                         onPressed: () async => {},
                         icon: Icon(
-                          Icons.qr_code,
+                          Icons.list,
                           color: Colors.blue,
                           size: isThermal ? 22 : 25,
                         ),
@@ -233,7 +234,7 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                       ),
                     ),
                   ],
-                )
+                ),
             ],
           ),
 
@@ -250,11 +251,12 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                   Expanded(
                     flex: 4,
                     child: CustomMaterialBtton(
-                        color: Colors.blue,
-                        onPressed: () async {},
-                        padding: const EdgeInsets.all(0),
-                        fontSize: 10,
-                        buttonText: 'Categories'),
+                      color: Colors.blue,
+                      onPressed: () async {},
+                      padding: const EdgeInsets.all(0),
+                      fontSize: 10,
+                      buttonText: 'Categories',
+                    ),
                   ),
                   kWidth5,
                   Expanded(
@@ -299,15 +301,16 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
 
           //==================== Product Listing Grid ====================
           Expanded(
-              flex: widget.isVertical ? 1 : 1,
-              child: Padding(
+            child: Stack(
+              children: [
+                Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 5),
                   child: GridView.builder(
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: widget.isVertical ? 4 : 5,
                       childAspectRatio: (1 / .75),
                     ),
-                    itemCount: [].length,
+                    itemCount: 40,
                     itemBuilder: (context, index) {
                       return InkWell(
                         onTap: () async {},
@@ -395,13 +398,27 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                         ),
                       );
                     },
-                  )
+                  ),
 
                   // : const Center(
                   //     child: Text('No Item Found!'),
                   //   );
-
-                  )),
+                ),
+                Align(
+                  alignment: Alignment.bottomRight,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: CircleAvatar(
+                      backgroundColor: baseColor,
+                      child: IconButton(
+                          onPressed: () {},
+                          icon: const Icon(Icons.filter_list, size: 20)),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

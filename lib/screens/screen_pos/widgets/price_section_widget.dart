@@ -50,7 +50,7 @@ class PriceSectionWidget extends StatelessWidget {
                                 children: [
                                   FittedBox(
                                     child: Text(
-                                      '101',
+                                      '0',
                                       overflow: TextOverflow.ellipsis,
                                       style: kItemsPriceStyleBold,
                                     ),
@@ -58,7 +58,7 @@ class PriceSectionWidget extends StatelessWidget {
                                   Flexible(
                                     child: FittedBox(
                                       child: Text(
-                                        '140',
+                                        '(0)',
                                         softWrap: false,
                                         overflow: TextOverflow.ellipsis,
                                         style: kItemsPriceStyleBold,
@@ -86,12 +86,12 @@ class PriceSectionWidget extends StatelessWidget {
                             Flexible(
                               child: FittedBox(
                                 child: Text(
-                                  '12450',
+                                  '0.00',
                                   overflow: TextOverflow.ellipsis,
                                   style: kItemsPriceStyleBold,
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -143,7 +143,7 @@ class PriceSectionWidget extends StatelessWidget {
                             Flexible(
                               child: FittedBox(
                                 child: Text(
-                                  '154',
+                                  '0.00',
                                   overflow: TextOverflow.ellipsis,
                                   style: kItemsPriceStyleBold,
                                 ),

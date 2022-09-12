@@ -1,75 +1,55 @@
 import 'package:flutter/material.dart';
+
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
-import 'package:trade_easy/screens/screen_home/widgets/product_side_widget.dart';
-import 'package:trade_easy/screens/screen_home/widgets/sale_side_widget.dart';
-import 'package:trade_easy/utils/device.dart';
+import 'package:trade_easy/screens/screen_home/widgets/home_grid_widget.dart';
+import 'package:trade_easy/screens/screen_home/widgets/main_drawer_widget.dart';
 
-class PosScreen extends StatelessWidget {
-  const PosScreen({Key? key}) : super(key: key);
+class ScreenHome extends StatelessWidget {
+  const ScreenHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) async {
-      await OrientationMode.toLandscape();
-    });
-    // Size _screenSize = MediaQuery.of(context).size;
-    return WillPopScope(
-      onWillPop: () async {
-        return true;
-      },
-      child: Scaffold(
-        resizeToAvoidBottomInset: false,
-        backgroundColor: kBackgroundGrey,
-        body: SafeArea(
-          child: Align(
-            alignment: Alignment.center,
-            child: FractionallySizedBox(
-              heightFactor: .99,
-              widthFactor: .98,
-              alignment: Alignment.topCenter,
-              child: OrientationMode.deviceMode == OrientationMode.normalMode
-                  ? Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        //========================================                  ========================================
-                        //======================================== Sale Side Widget ========================================
-                        //========================================                  ========================================
-                        SaleSideWidget(),
-
-                        //==================== Constant Width ====================
-                        kWidth20,
-
-                        //========================================                     ========================================
-                        //======================================== Product Side Widget ========================================
-                        //========================================                     ========================================
-                        ProductSideWidget()
-                      ],
-                    )
-                  : Column(
-                      // crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        //========================================                     ========================================
-                        //======================================== Product Side Widget ========================================
-                        //========================================                     ========================================
-                        ProductSideWidget(isVertical: true),
-
-                        //==================== Divider ====================
-                        Divider(thickness: 1, height: 10),
-
-                        // //========================================                  ========================================
-                        // //======================================== Sale Side Widget ========================================
-                        // //========================================                  ========================================
-                        SaleSideWidget(isVertical: true),
-                      ],
-                    ),
+    final screenSize = MediaQuery.of(context).size;
+    return Scaffold(
+      backgroundColor: baseColor,
+      appBar: AppBar(
+        backgroundColor: baseColor,
+        elevation: 0,
+      ),
+      drawer: const MainDrawerWidget(),
+      body: SafeArea(
+          child: Column(
+        children: [
+          Container(
+            height: screenSize.height / 12,
+            width: screenSize.width,
+            color: baseColor,
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Image.asset(
+                "assets/logos/tradeEZlog.png",
+              ),
             ),
           ),
-        ),
-      ),
+          Expanded(
+              child: Container(
+            decoration: const BoxDecoration(
+                color: kWhiteColor,
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(40),
+                  topLeft: Radius.circular(40),
+                )),
+            child: const HomeGridWidget(),
+          )),
+          kHeight5,
+          const Text(
+            "Powered By CIGNES",
+            style: TextStyle(color: kWhiteColor, fontWeight: FontWeight.bold),
+          ),
+          kHeight5,
+        ],
+      )),
     );
   }
 }

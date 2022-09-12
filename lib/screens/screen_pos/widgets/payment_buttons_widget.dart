@@ -42,7 +42,7 @@ class PaymentButtonsWidget extends StatelessWidget {
                 Flexible(
                   child: FittedBox(
                     child: Text(
-                      '1850',
+                      '0.000',
                       overflow: TextOverflow.ellipsis,
                       style: kItemsButtontyle,
                     ),

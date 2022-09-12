@@ -5,6 +5,7 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
 import 'package:trade_easy/routes/routes.dart';
+
 import 'package:trade_easy/screens/screen_login/widgets/text_field_widget.dart';
 
 class ScreenLogin extends StatelessWidget {
