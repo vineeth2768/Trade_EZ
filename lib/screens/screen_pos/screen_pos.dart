@@ -6,8 +6,8 @@ import 'package:trade_easy/screens/screen_pos/widgets/product_side_widget.dart';
 import 'package:trade_easy/screens/screen_pos/widgets/sale_side_widget.dart';
 import 'package:trade_easy/utils/device.dart';
 
-class PosScreen extends StatelessWidget {
-  const PosScreen({Key? key}) : super(key: key);
+class ScreenPos extends StatelessWidget {
+  const ScreenPos({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -70,10 +70,6 @@ class PosScreen extends StatelessWidget {
             ),
           ),
         ),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: () {},
-        //   child: const Icon(Icons.filter_list),
-        // ),
       ),
     );
   }

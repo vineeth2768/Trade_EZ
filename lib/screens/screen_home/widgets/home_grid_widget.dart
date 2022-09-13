@@ -39,6 +39,30 @@ class HomeGridWidget extends StatelessWidget {
               await Navigator.pushNamed(context, routePos);
             },
           ),
+          InkWell(
+            child: Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              color: Colors.teal[100],
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/home_icons/stock.png",
+                    height: 100,
+                  ),
+                  const Text(
+                    "View Stock",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+            ),
+            onTap: () {
+              Navigator.pushNamed(context, routeSales);
+            },
+          ),
           Card(
             elevation: 5,
             shape:
@@ -52,28 +76,9 @@ class HomeGridWidget extends StatelessWidget {
                   height: 100,
                 ),
                 const Text(
-                  "Sales",
+                  "Credited Sales",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                )
-              ],
-            ),
-          ),
-          Card(
-            elevation: 5,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            color: Colors.teal[100],
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  "assets/home_icons/manage-users.png",
-                  height: 100,
                 ),
-                const Text(
-                  "Manage Users",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                )
               ],
             ),
           ),
@@ -90,9 +95,28 @@ class HomeGridWidget extends StatelessWidget {
                   height: 100,
                 ),
                 const Text(
-                  "Expense",
+                  "View Reciept",
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                )
+                ),
+              ],
+            ),
+          ),
+          Card(
+            elevation: 5,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            color: Colors.teal[100],
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "assets/home_icons/item-master.png",
+                  height: 100,
+                ),
+                const Text(
+                  "Register",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
               ],
             ),
           ),

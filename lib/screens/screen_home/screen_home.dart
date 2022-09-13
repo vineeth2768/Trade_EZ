@@ -33,15 +33,16 @@ class ScreenHome extends StatelessWidget {
             ),
           ),
           Expanded(
-              child: Container(
-            decoration: const BoxDecoration(
-                color: kWhiteColor,
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(40),
-                  topLeft: Radius.circular(40),
-                )),
-            child: const HomeGridWidget(),
-          )),
+            child: Container(
+              decoration: const BoxDecoration(
+                  color: kWhiteColor,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(40),
+                    topLeft: Radius.circular(40),
+                  )),
+              child: const HomeGridWidget(),
+            ),
+          ),
           kHeight5,
           const Text(
             "Powered By CIGNES",

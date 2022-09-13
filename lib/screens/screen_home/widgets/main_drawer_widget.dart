@@ -12,7 +12,7 @@ class MainDrawerWidget extends StatelessWidget {
     return SafeArea(
       child: Drawer(
         child: ListView(
-          children: [
+          children: <Widget>[
             const UserAccountsDrawerHeader(
               currentAccountPicture: CircleAvatar(
                 backgroundColor: kWhiteColor,
@@ -35,7 +35,7 @@ class MainDrawerWidget extends StatelessWidget {
                 Icons.shopping_bag,
                 color: baseColor,
               ),
-              title: const Text('Sales'),
+              title: const Text('View Stock'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -45,7 +45,7 @@ class MainDrawerWidget extends StatelessWidget {
                 Icons.insert_invitation,
                 color: baseColor,
               ),
-              title: const Text('Expense'),
+              title: const Text('Credited Sales'),
               onTap: () {
                 Navigator.pop(context);
               },
@@ -55,7 +55,7 @@ class MainDrawerWidget extends StatelessWidget {
                 Icons.report_gmailerrorred,
                 color: baseColor,
               ),
-              title: const Text('Terms & Conditions'),
+              title: const Text('View Reciept'),
               onTap: () {
                 Navigator.pop(context);
               },

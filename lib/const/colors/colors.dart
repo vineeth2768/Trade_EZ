@@ -9,6 +9,7 @@ const Color kOrange = Colors.orange;
 const Color kGreen = Colors.green;
 const Color kRed = Colors.red;
 const Color kTeal = Colors.teal;
+const Color kViolet = Color(0xFF6919FD);
 
 const Color kBackgroundGrey = Color.fromRGBO(238, 238, 238, 1);
 const kTextErrorColor = Color(0xFFEF5350);

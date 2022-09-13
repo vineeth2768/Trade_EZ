@@ -404,18 +404,18 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                   //     child: Text('No Item Found!'),
                   //   );
                 ),
-                Align(
-                  alignment: Alignment.bottomRight,
-                  child: Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: CircleAvatar(
-                      backgroundColor: baseColor,
-                      child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.filter_list, size: 20)),
-                    ),
-                  ),
-                ),
+                // Align(
+                //   alignment: Alignment.bottomRight,
+                //   child: Padding(
+                //     padding: const EdgeInsets.all(5.0),
+                //     child: CircleAvatar(
+                //       backgroundColor: baseColor,
+                //       child: IconButton(
+                //           onPressed: () {},
+                //           icon: const Icon(Icons.filter_list, size: 20)),
+                //     ),
+                //   ),
+                // ),
               ],
             ),
           ),
