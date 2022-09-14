@@ -37,7 +37,7 @@ class MainDrawerWidget extends StatelessWidget {
               ),
               title: const Text('View Stock'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, routeViewStock);
               },
             ),
             ListTile(
@@ -47,7 +47,7 @@ class MainDrawerWidget extends StatelessWidget {
               ),
               title: const Text('Credited Sales'),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.pushNamed(context, routeCreditedSale);
               },
             ),
             ListTile(

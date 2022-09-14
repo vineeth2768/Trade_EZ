@@ -111,26 +111,26 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                   ),
                   kWidth5,
                   //========== Barcode Scanner Button ==========
-                  Flexible(
-                    flex: 1,
-                    child: FittedBox(
-                      alignment: Alignment.center,
-                      child: IconButton(
-                        padding: const EdgeInsets.all(5),
-                        alignment: Alignment.center,
-                        constraints: const BoxConstraints(
-                          minHeight: 20,
-                          maxHeight: 20,
-                        ),
-                        onPressed: () async => {},
-                        icon: Icon(
-                          Icons.list,
-                          color: Colors.blue,
-                          size: isThermal ? 22 : 25,
-                        ),
-                      ),
-                    ),
-                  ),
+                  // Flexible(
+                  //   flex: 1,
+                  //   child: FittedBox(
+                  //     alignment: Alignment.center,
+                  //     child: IconButton(
+                  //       padding: const EdgeInsets.all(5),
+                  //       alignment: Alignment.center,
+                  //       constraints: const BoxConstraints(
+                  //         minHeight: 20,
+                  //         maxHeight: 20,
+                  //       ),
+                  //       onPressed: () async => {},
+                  //       icon: Icon(
+                  //         Icons.list,
+                  //         color: Colors.blue,
+                  //         size: isThermal ? 22 : 25,
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
                 ],
               ),
               kHeight3,

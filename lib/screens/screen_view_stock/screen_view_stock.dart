@@ -13,14 +13,17 @@ class ScreenViewStock extends StatelessWidget {
         title: const Text("View Stock"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: ListView(
+        padding: const EdgeInsets.all(5.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             const TableHeaderWidget(),
-            const Expanded(
-              child: ProductListTableWidget(),
-            ),
-            Container()
+            Expanded(
+                child: ListView(
+              children: const [
+                ProductListTableWidget(),
+              ],
+            )),
           ],
         ),
       ),

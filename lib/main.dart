@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:trade_easy/routes/routes.dart';
+import 'package:trade_easy/screens/screen_credited_sale/screen_credited_sale.dart';
 import 'package:trade_easy/screens/screen_home/screen_home.dart';
 
 import 'package:trade_easy/screens/screen_login/screen_login.dart';
 import 'package:trade_easy/screens/screen_pos/screen_pos.dart';
 
 import 'package:trade_easy/screens/screen_splash/screen_splash.dart';
+import 'package:trade_easy/screens/screen_view_reciept/screen_view_reciept.dart';
 import 'package:trade_easy/screens/screen_view_stock/screen_view_stock.dart';
 
 Future<void> main() async {
@@ -37,7 +39,9 @@ class MyApp extends StatelessWidget {
           routeLogin: (context) => const ScreenLogin(),
           routeHome: (context) => const ScreenHome(),
           routePos: (context) => const ScreenPos(),
-          routeSales: (context) => const ScreenViewStock(),
+          routeViewStock: (context) => const ScreenViewStock(),
+          routeCreditedSale: (context) => const ScreenCreditedSale(),
+          routeViewReciept: (context) => const ScreenViewReciept(),
         },
       );
     });
