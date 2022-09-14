@@ -5,3 +5,4 @@ const String routePos = "/routePos";
 const String routeViewStock = "/routeSales";
 const String routeCreditedSale = "/routeCreditedSale";
 const String routeViewReciept = "/routeReciept";
+const String routeRegister = "/routeRegister";

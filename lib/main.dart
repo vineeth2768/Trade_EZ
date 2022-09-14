@@ -7,6 +7,7 @@ import 'package:trade_easy/screens/screen_home/screen_home.dart';
 
 import 'package:trade_easy/screens/screen_login/screen_login.dart';
 import 'package:trade_easy/screens/screen_pos/screen_pos.dart';
+import 'package:trade_easy/screens/screen_register/screen_register.dart';
 
 import 'package:trade_easy/screens/screen_splash/screen_splash.dart';
 import 'package:trade_easy/screens/screen_view_reciept/screen_view_reciept.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
           routeViewStock: (context) => const ScreenViewStock(),
           routeCreditedSale: (context) => const ScreenCreditedSale(),
           routeViewReciept: (context) => const ScreenViewReciept(),
+          routeRegister: (context) => const ScreenRegister(),
         },
       );
     });

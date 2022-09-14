@@ -111,24 +111,29 @@ class HomeGridWidget extends StatelessWidget {
               Navigator.pushNamed(context, routeViewReciept);
             },
           ),
-          Card(
-            elevation: 5,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-            color: Colors.teal[100],
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  "assets/home_icons/item-master.png",
-                  height: 100,
-                ),
-                const Text(
-                  "Register",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                ),
-              ],
+          InkWell(
+            child: Card(
+              elevation: 5,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20)),
+              color: Colors.teal[100],
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/home_icons/item-master.png",
+                    height: 100,
+                  ),
+                  const Text(
+                    "Register",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ),
+            onTap: () {
+              Navigator.pushNamed(context, routeRegister);
+            },
           ),
         ]);
   }
