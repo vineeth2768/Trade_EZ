@@ -1,11 +1,15 @@
 // ignore_for_file: invalid_use_of_protected_member, invalid_use_of_visible_for_testing_member, must_be_immutable
 
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import 'package:flutter_typeahead/flutter_typeahead.dart';
 
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
+import 'package:trade_easy/routes/routes.dart';
+import 'package:trade_easy/screens/screen_pos/widgets/customer_data_text_widget.dart';
 
 import 'package:trade_easy/screens/screen_pos/widgets/sale_side_widget.dart';
 import 'package:trade_easy/utils/device.dart';
@@ -110,27 +114,6 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                     ),
                   ),
                   kWidth5,
-                  //========== Barcode Scanner Button ==========
-                  // Flexible(
-                  //   flex: 1,
-                  //   child: FittedBox(
-                  //     alignment: Alignment.center,
-                  //     child: IconButton(
-                  //       padding: const EdgeInsets.all(5),
-                  //       alignment: Alignment.center,
-                  //       constraints: const BoxConstraints(
-                  //         minHeight: 20,
-                  //         maxHeight: 20,
-                  //       ),
-                  //       onPressed: () async => {},
-                  //       icon: Icon(
-                  //         Icons.list,
-                  //         color: Colors.blue,
-                  //         size: isThermal ? 22 : 25,
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
                 ],
               ),
               kHeight3,
@@ -149,7 +132,6 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                             controller: SaleSideWidget.customerController,
                             style: kText_10_12,
                             decoration: InputDecoration(
-                              // constraints: const BoxConstraints(maxHeight: 35),
                               fillColor: Colors.white,
                               filled: true,
                               isDense: true,
@@ -166,7 +148,6 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                               ),
                               contentPadding:
                                   EdgeInsets.all(isThermal ? 8 : 10),
-
                               hintText: 'Customer',
                               hintStyle: kText_10_12,
                               border: const OutlineInputBorder(),
@@ -204,7 +185,70 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                               minHeight: 20,
                               maxHeight: 20,
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              log("View Coustomer Clicked!");
+                              showModalBottomSheet(
+                                context: context,
+                                builder: (context) {
+                                  return SizedBox(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(15.0),
+                                      child: Column(
+                                        children: const [
+                                          Text(
+                                            "Vipil Nair",
+                                            style: TextStyle(
+                                              fontSize: 20,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                          Divider(),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Customer Group",
+                                              values: "RT 3"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Vat number",
+                                              values: "11123478VAT"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Deposit", values: "4000"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Email",
+                                              values: "vipil@gmail.com"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Phone",
+                                              values: "8590932880"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Adderss",
+                                              values:
+                                                  "Near Metro Station Channai"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "City", values: "Channai"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "State",
+                                              values: "Tamilnadu"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Postal Code",
+                                              values: "86378"),
+                                          kHeight15,
+                                          CustomerDataTextWidget(
+                                              title: "Country",
+                                              values: "India"),
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                },
+                              );
+                            },
                             icon: Icon(
                               Icons.visibility,
                               color: Colors.blue,
@@ -224,7 +268,9 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                             minHeight: 20,
                             maxHeight: 20,
                           ),
-                          onPressed: () async {},
+                          onPressed: () async {
+                            Navigator.pushNamed(context, routeAddCustomer);
+                          },
                           icon: Icon(
                             Icons.person_add,
                             color: Colors.blue,
@@ -404,18 +450,6 @@ class _ProductSideWidgetState extends State<ProductSideWidget> {
                   //     child: Text('No Item Found!'),
                   //   );
                 ),
-                // Align(
-                //   alignment: Alignment.bottomRight,
-                //   child: Padding(
-                //     padding: const EdgeInsets.all(5.0),
-                //     child: CircleAvatar(
-                //       backgroundColor: baseColor,
-                //       child: IconButton(
-                //           onPressed: () {},
-                //           icon: const Icon(Icons.filter_list, size: 20)),
-                //     ),
-                //   ),
-                // ),
               ],
             ),
           ),

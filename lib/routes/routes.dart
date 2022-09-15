@@ -6,3 +6,4 @@ const String routeViewStock = "/routeSales";
 const String routeCreditedSale = "/routeCreditedSale";
 const String routeViewReciept = "/routeReciept";
 const String routeRegister = "/routeRegister";
+const String routeAddCustomer = "/routeAddCustomer";

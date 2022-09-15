@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:trade_easy/routes/routes.dart';
+import 'package:trade_easy/screens/screen_add_customer/screen_add_customer.dart';
 import 'package:trade_easy/screens/screen_credited_sale/screen_credited_sale.dart';
 import 'package:trade_easy/screens/screen_home/screen_home.dart';
 
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
           routeCreditedSale: (context) => const ScreenCreditedSale(),
           routeViewReciept: (context) => const ScreenViewReciept(),
           routeRegister: (context) => const ScreenRegister(),
+          routeAddCustomer: (context) => ScreenAddCustomer(),
         },
       );
     });
