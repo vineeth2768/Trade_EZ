@@ -1,18 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:trade_easy/routes/route_generator.dart';
 import 'package:trade_easy/routes/routes.dart';
-import 'package:trade_easy/screens/screen_add_customer/screen_add_customer.dart';
-import 'package:trade_easy/screens/screen_credited_sale/screen_credited_sale.dart';
-import 'package:trade_easy/screens/screen_home/screen_home.dart';
-
-import 'package:trade_easy/screens/screen_login/screen_login.dart';
-import 'package:trade_easy/screens/screen_pos/screen_pos.dart';
-import 'package:trade_easy/screens/screen_register/screen_register.dart';
-
-import 'package:trade_easy/screens/screen_splash/screen_splash.dart';
-import 'package:trade_easy/screens/screen_view_reciept/screen_view_reciept.dart';
-import 'package:trade_easy/screens/screen_view_stock/screen_view_stock.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,18 +25,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.teal,
         ),
-        initialRoute: route,
-        routes: {
-          route: (context) => ScreenSplash(),
-          routeLogin: (context) => const ScreenLogin(),
-          routeHome: (context) => const ScreenHome(),
-          routePos: (context) => const ScreenPos(),
-          routeViewStock: (context) => const ScreenViewStock(),
-          routeCreditedSale: (context) => const ScreenCreditedSale(),
-          routeViewReciept: (context) => const ScreenViewReciept(),
-          routeRegister: (context) => const ScreenRegister(),
-          routeAddCustomer: (context) => ScreenAddCustomer(),
-        },
+        initialRoute: routeRoot,
+        onGenerateRoute: RouteGenerator.generateRoutes,
       );
     });
   }

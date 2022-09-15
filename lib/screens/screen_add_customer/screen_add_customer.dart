@@ -4,15 +4,15 @@ import 'package:trade_easy/const/size/size.dart';
 import 'package:trade_easy/screens/screen_add_customer/widgets/add_customer_textfield_widget.dart';
 
 class ScreenAddCustomer extends StatelessWidget {
-  ScreenAddCustomer({super.key});
+  const ScreenAddCustomer({super.key});
 
-  final customers = [
+  static final _customers = [
     "Genaral",
     "Reseller",
     "Distributor",
     "New Customer(+10)",
   ];
-  final priceGroup = [
+  static final _priceGroup = [
     "Default",
   ];
 
@@ -31,13 +31,13 @@ class ScreenAddCustomer extends StatelessWidget {
               decoration: const InputDecoration(
                   labelText: "Customer Group",
                   enabledBorder: OutlineInputBorder()),
-              items: customers.map<DropdownMenuItem<String>>((String value) {
+              items: _customers.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),
                 );
               }).toList(),
-              value: customers.first,
+              value: _customers.first,
               onChanged: (String? newValue) {},
             ),
             kHeight10,
@@ -45,13 +45,13 @@ class ScreenAddCustomer extends StatelessWidget {
               decoration: const InputDecoration(
                   labelText: "Price Group",
                   enabledBorder: OutlineInputBorder()),
-              items: priceGroup.map<DropdownMenuItem<String>>((String value) {
+              items: _priceGroup.map<DropdownMenuItem<String>>((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
                   child: Text(value),
                 );
               }).toList(),
-              value: priceGroup.first,
+              value: _priceGroup.first,
               onChanged: (String? newValue) {},
             ),
             kHeight10,

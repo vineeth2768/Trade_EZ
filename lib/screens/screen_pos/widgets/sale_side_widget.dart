@@ -8,7 +8,6 @@ import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
 import 'package:trade_easy/routes/routes.dart';
-import 'package:trade_easy/screens/screen_add_customer/screen_add_customer.dart';
 import 'package:trade_easy/screens/screen_pos/widgets/customer_data_text_widget.dart';
 
 import 'package:trade_easy/screens/screen_pos/widgets/payment_buttons_widget.dart';

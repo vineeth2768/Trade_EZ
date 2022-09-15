@@ -10,7 +10,9 @@ import 'package:trade_easy/routes/routes.dart';
 import 'package:trade_easy/utils/device.dart';
 
 class ScreenSplash extends StatelessWidget {
-  ScreenSplash({Key? key}) : super(key: key);
+  ScreenSplash({Key? key, this.hi}) : super(key: key);
+
+  final hi;
 
   String? orientationMode;
   late SharedPreferences prefs;
