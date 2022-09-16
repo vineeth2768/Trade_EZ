@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
 import 'package:trade_easy/routes/routes.dart';
-import 'package:trade_easy/screens/screen_register/widgets/register_textfield.dart';
+
 import 'package:trade_easy/screens/screen_register/widgets/text_widget.dart';
+import 'package:trade_easy/widgets/custom_text_field.dart';
 
 class ScreenRegister extends StatelessWidget {
   const ScreenRegister({super.key});
@@ -51,11 +52,11 @@ class ScreenRegister extends StatelessWidget {
                 color: primaryColor,
               ),
               kHeight10,
-              const RegisterTextFieldWidget(labal: "Total Cash*"),
+              const CustomTextFieldWidget(labal: "Total Cash*"),
               kHeight10,
-              const RegisterTextFieldWidget(labal: "Total Credit Card Slips*"),
+              const CustomTextFieldWidget(labal: "Total Credit Card Slips*"),
               kHeight10,
-              const RegisterTextFieldWidget(labal: "Total Cheques*"),
+              const CustomTextFieldWidget(labal: "Total Cheques*"),
               kHeight10,
               TextFormField(
                 maxLines: 4,

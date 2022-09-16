@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class RegisterTextFieldWidget extends StatelessWidget {
-  const RegisterTextFieldWidget({
+class CustomTextFieldWidget extends StatelessWidget {
+  const CustomTextFieldWidget({
     Key? key,
     required this.labal,
   }) : super(key: key);

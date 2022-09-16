@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:trade_easy/routes/routes.dart';
 import 'package:trade_easy/screens/screen_add_customer/screen_add_customer.dart';
+import 'package:trade_easy/screens/screen_add_payment/screen_add_payment.dart';
 import 'package:trade_easy/screens/screen_credited_sale/screen_credited_sale.dart';
 import 'package:trade_easy/screens/screen_credited_sale/screen_sales/screen_sales.dart';
 import 'package:trade_easy/screens/screen_home/screen_home.dart';
@@ -42,6 +43,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ScreenAddCustomer());
       case routeUserProfile:
         return MaterialPageRoute(builder: (_) => const ScreenUserProfile());
+      case routeAddPayment:
+        return MaterialPageRoute(builder: (_) => const ScreenAddPayment());
       case routeSales:
         if (args is Map) {
           return MaterialPageRoute(builder: (_) {

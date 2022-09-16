@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
+import 'package:trade_easy/routes/routes.dart';
 import 'package:trade_easy/widgets/row_custom_text.dart';
 
 class ScreenSales extends StatelessWidget {
@@ -94,7 +95,9 @@ class ScreenSales extends StatelessWidget {
                   child: SalesButtonWidget(
                     title: "ADD PAYMENT",
                     color: kBlue,
-                    onPress: () {},
+                    onPress: () {
+                      Navigator.pushNamed(context, routeAddPayment);
+                    },
                   ),
                 ),
               ],

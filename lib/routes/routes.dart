@@ -9,3 +9,4 @@ const String routeRegister = "/register";
 const String routeAddCustomer = "/add_customer";
 const String routeSales = "/sales";
 const String routeUserProfile = "/user_profile";
+const String routeAddPayment = "/add_payment";
