@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trade_easy/const/colors/colors.dart';
 import 'package:trade_easy/const/size/size.dart';
+import 'package:trade_easy/routes/routes.dart';
 import 'package:trade_easy/screens/screen_register/widgets/register_textfield.dart';
 import 'package:trade_easy/screens/screen_register/widgets/text_widget.dart';
 
@@ -67,7 +68,9 @@ class ScreenRegister extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   MaterialButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, routeUserProfile);
+                    },
                     color: kBlue,
                     child: const Text(
                       "VIEW PROFILE",
