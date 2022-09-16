@@ -17,7 +17,7 @@ class ProductListTableWidget extends StatelessWidget {
         5: FractionColumnWidth(0.13),
       },
       border: TableBorder.all(color: Colors.grey, width: 0.5),
-      children: List<TableRow>.generate(30, (index) {
+      children: List<TableRow>.generate(35, (index) {
         return TableRow(children: [
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 5.0),
