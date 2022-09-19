@@ -11,3 +11,4 @@ const String routeSales = "/sales";
 const String routeUserProfile = "/user_profile";
 const String routeAddPayment = "/add_payment";
 const String routeReturnSale = "/return_sale";
+const String routeViewPayment = "/view_payment";

@@ -86,7 +86,9 @@ class ScreenSales extends StatelessWidget {
                   child: SalesButtonWidget(
                     title: "VIEW PAYMENT",
                     color: kBlue,
-                    onPress: () {},
+                    onPress: () {
+                      Navigator.pushNamed(context, routeViewPayment);
+                    },
                   ),
                 ),
               ],

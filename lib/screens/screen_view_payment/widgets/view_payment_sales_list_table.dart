@@ -2,21 +2,19 @@ import 'package:flutter/material.dart';
 
 import 'package:trade_easy/const/colors/colors.dart';
 
-class SaleReturnProductList extends StatelessWidget {
-  const SaleReturnProductList({super.key});
+class ViewPaymentSalesListtable extends StatelessWidget {
+  const ViewPaymentSalesListtable({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Table(
       columnWidths: const {
-        0: FractionColumnWidth(0.14),
-        1: FractionColumnWidth(0.06),
-        2: FractionColumnWidth(0.03),
-        3: FractionColumnWidth(0.03),
-        4: FractionColumnWidth(0.10),
-        5: FractionColumnWidth(0.03),
+        0: FractionColumnWidth(0.10),
+        1: FractionColumnWidth(0.10),
+        2: FractionColumnWidth(0.10),
+        3: FractionColumnWidth(0.10),
       },
-      border: TableBorder.all(color: kBackgroundGrey, width: 0.5),
+      border: TableBorder.all(color: kBackgroundGrey),
       children: List<TableRow>.generate(1, (index) {
         return TableRow(children: [
           Container(
@@ -25,7 +23,7 @@ class SaleReturnProductList extends StatelessWidget {
             height: 40,
             alignment: Alignment.center,
             child: const Text(
-              'Boost 500g',
+              '21/07/2022',
               softWrap: true,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
@@ -37,7 +35,7 @@ class SaleReturnProductList extends StatelessWidget {
             height: 40,
             alignment: Alignment.center,
             child: const Text(
-              '257',
+              'IPAY2395',
               softWrap: true,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
@@ -49,7 +47,7 @@ class SaleReturnProductList extends StatelessWidget {
             height: 40,
             alignment: Alignment.center,
             child: const Text(
-              '1',
+              '44.00 SR',
               softWrap: true,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
@@ -61,32 +59,10 @@ class SaleReturnProductList extends StatelessWidget {
             height: 40,
             alignment: Alignment.center,
             child: const Text(
-              '4',
+              'Cash',
               softWrap: true,
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-            color: Colors.white,
-            height: 40,
-            alignment: Alignment.center,
-            child: const Text(
-              '1045',
-              softWrap: true,
-              overflow: TextOverflow.ellipsis,
-              maxLines: 2,
-            ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 5.0),
-            color: Colors.white,
-            height: 40,
-            alignment: Alignment.center,
-            child: IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.close),
             ),
           ),
         ]);

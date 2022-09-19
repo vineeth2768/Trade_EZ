@@ -13,6 +13,7 @@ import 'package:trade_easy/screens/screen_register/screen_register.dart';
 import 'package:trade_easy/screens/screen_return_sale/screen_return_sale.dart';
 import 'package:trade_easy/screens/screen_splash/screen_splash.dart';
 import 'package:trade_easy/screens/screen_user_profile/screen_user_profile.dart';
+import 'package:trade_easy/screens/screen_view_payment/screen_view_payment.dart';
 import 'package:trade_easy/screens/screen_view_reciept/screen_view_reciept.dart';
 import 'package:trade_easy/screens/screen_view_stock/screen_view_stock.dart';
 
@@ -48,6 +49,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const ScreenAddPayment());
       case routeReturnSale:
         return MaterialPageRoute(builder: (_) => const ScreenReturnSale());
+      case routeViewPayment:
+        return MaterialPageRoute(builder: (_) => const ScreenViewPayment());
       case routeSales:
         if (args is Map) {
           return MaterialPageRoute(builder: (_) {
