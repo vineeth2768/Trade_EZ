@@ -65,7 +65,9 @@ class ScreenSales extends StatelessWidget {
                   child: SalesButtonWidget(
                     title: "EDIT SALE",
                     color: kBlue,
-                    onPress: () {},
+                    onPress: () {
+                      Navigator.pushNamed(context, routeEditSale);
+                    },
                   ),
                 ),
               ],
