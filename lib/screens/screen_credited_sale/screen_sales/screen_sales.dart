@@ -76,7 +76,9 @@ class ScreenSales extends StatelessWidget {
                   child: SalesButtonWidget(
                     title: "RETURN SALE",
                     color: kBlue,
-                    onPress: () {},
+                    onPress: () {
+                      Navigator.pushNamed(context, routeReturnSale);
+                    },
                   ),
                 ),
                 kWidth5,

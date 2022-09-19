@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trade_easy/const/colors/colors.dart';
+import 'package:trade_easy/screens/screen_view_stock/widgets/table_header_text.dart';
 
 class TableHeaderWidget extends StatelessWidget {
   const TableHeaderWidget({
@@ -18,91 +19,37 @@ class TableHeaderWidget extends StatelessWidget {
         5: FractionColumnWidth(0.13),
       },
       border: TableBorder.all(width: 0.5),
-      children: [
+      children: const [
         TableRow(children: [
-          Container(
+          TableheaderText(
             color: kBlue,
             height: 40,
-            alignment: Alignment.center,
-            child: const Text(
-              "No",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kWhiteColor,
-              ),
-            ),
+            title: "No",
           ),
-          Container(
+          TableheaderText(
             color: kBlue,
             height: 40,
-            alignment: Alignment.center,
-            child: const Text(
-              "Code",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kWhiteColor,
-              ),
-            ),
+            title: "Code",
           ),
-          Container(
+          TableheaderText(
             color: kBlue,
             height: 40,
-            alignment: Alignment.center,
-            child: const Text(
-              "Name",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kWhiteColor,
-              ),
-            ),
+            title: "Name",
           ),
-          Container(
+          TableheaderText(
             color: kBlue,
             height: 40,
-            alignment: Alignment.center,
-            child: const Text(
-              "Price",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kWhiteColor,
-              ),
-            ),
+            title: "Price",
           ),
-          Container(
+          TableheaderText(
             color: kBlue,
             height: 40,
-            alignment: Alignment.center,
-            child: const Text(
-              "Stock Qty",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kWhiteColor,
-              ),
-            ),
+            title: "Stock Qty",
           ),
-          Container(
+          TableheaderText(
             color: kBlue,
             height: 40,
-            alignment: Alignment.center,
-            child: const Text(
-              "SubTotal",
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: kWhiteColor,
-              ),
-            ),
+            title: "SubTotal",
           ),
         ])
       ],
